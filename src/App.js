@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-const useCount = () => {
+const useCount = (initialValue = 0) => {
 
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(initialValue);
   const increase = () => setCounter(counter + 1);
   const decrement = () => setCounter(counter - 1);
   const reset = () => setCounter(0);
